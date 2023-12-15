@@ -19,15 +19,11 @@ public class MainApp {
       Car car3 = new Car(3, "Lada");
       Car car4 = new Car(4, "Audi");
 
-      User user1  = new User("Name1", "LastName1", "name1@email.com");
-      User user2  = new User("Name2", "LastName2", "name2@email.com");
-      User user3  = new User("Name3", "LastName3", "name3@email.com");
-      User user4  = new User("Name4", "LastName4", "name4@email.com");
+      User user1  = new User("Name1", "LastName1", "name1@email.com", car1);
+      User user2  = new User("Name2", "LastName2", "name2@email.com", car2);
+      User user3  = new User("Name3", "LastName3", "name3@email.com", car3);
+      User user4  = new User("Name4", "LastName4", "name4@email.com", car4);
 
-      user1.setCar(car1);
-      user2.setCar(car2);
-      user3.setCar(car3);
-      user4.setCar(car4);
       userService.add(user1);
       userService.add(user2);
       userService.add(user3);
