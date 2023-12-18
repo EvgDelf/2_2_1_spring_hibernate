@@ -23,10 +23,15 @@ import java.util.Properties;
 @ComponentScan(value = "hiber")
 public class AppConfig {
 
-   @Autowired
-   private Environment env;
 
-   @Bean
+   private final Environment env;
+
+   @Autowired
+    public AppConfig(Environment env) {
+        this.env = env;
+    }
+
+    @Bean
    public DataSource getDataSource() {
       DriverManagerDataSource dataSource = new DriverManagerDataSource();
       dataSource.setDriverClassName(env.getProperty("db.driver"));
